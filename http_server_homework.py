@@ -12,7 +12,6 @@ OPERATIONS = {
     "/divide": ("division", lambda a, b: a / b),
 }
 
-
 class CalculatorHandler(BaseHTTPRequestHandler):
     def _send_json(self, status_code, payload):
         body = json.dumps(payload, indent=4).encode("utf-8")
