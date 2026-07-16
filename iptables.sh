@@ -7,7 +7,7 @@ LB01_IP="172.20.0.10"
 iptables -F INPUT
 iptables -X 2>/dev/null || true
 
-#deny outbound and leave inbound open
+#deny inbound and leave outbound open
 iptables -P INPUT DROP
 iptables -P FORWARD DROP
 iptables -P OUTPUT ACCEPT
